@@ -65,14 +65,11 @@ def start(Postition, Lsr):
             # 資金費率
             fd = float(fdr_resp[0]['fundingRate']) * 100
 
-            # 列出 幣種 持倉變化、多空比（皆為跟八小時前比）
+            # 列出 幣種、持倉變化、多空比（皆為跟八小時前比））目前資金費率
             print(symbol, op_100,"%", lsr_100,"%", fd,"%")
             if op_100 > Postition and lsr_100 < -Lsr:
                 list_meet.append(symbol)
         except:
             pass
-    
+    # 符合條件的幣種
     print(list_meet)
-
-
-start(20,20)
